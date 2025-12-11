@@ -1,0 +1,13 @@
+@model IEnumerable<Product>
+
+<h1>@ViewBag.message</h1>
+
+<div class="product-list">
+    @foreach (var product in Model)
+    {
+        <div class="product-item">
+            <h3>@product.Name</h3>
+            <img src="~/Img/Tomte_@(product.ProductId).jpg" alt="@product.Name" class="product-image" />
+        </div>
+    }
+</div>

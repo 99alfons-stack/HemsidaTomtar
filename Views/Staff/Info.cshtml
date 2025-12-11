@@ -1,0 +1,26 @@
+@model Staff
+<div class="staff-info">
+<h1>@Model.Name</h1>
+
+<img src="~/Img/img_@(Model.StaffId).png" class="staff-image" />
+
+<div class="staff-details">
+    <p><strong>Ålder:</strong> @Model.Age år</p>
+    @if(!string.IsNullOrWhiteSpace(Model.Email))
+    {
+        <p><strong>Email:</strong> <a href="mailto:@Model.Email">@Model.Email</a></p>
+    }
+    @if(Model.Admin)
+    {
+        <p><span class="staff-admin-badge">👔 Administrator</span></p>
+    }
+</div>
+
+@if(!string.IsNullOrWhiteSpace(Model.Bio))
+{
+    <div class="staff-bio">
+        <h3>Om @Model.Name</h3>
+        <p>@Model.Bio</p>
+    </div>
+}
+</div>

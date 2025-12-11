@@ -1,0 +1,10 @@
+@model IEnumerable<Staff>
+<div class="Personal-info">
+<h1>Personal</h1>
+<p>@ViewBag.message</p>
+
+@foreach(var staff in Model)
+{
+   <partial name ="_StaffListItem" model="staff" /> //NU hämtar vi information från StaffList item istället för att ha koden här.
+}
+</div>
