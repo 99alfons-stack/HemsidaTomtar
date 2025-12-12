@@ -8,6 +8,7 @@
         <div class="product-item">
             <h3>@product.Name</h3>
             <img src="~/Img/Tomte_@(product.ProductId).jpg" alt="@product.Name" class="product-image" />
+            <p class="product-price">@($"{product.Price:0.00} kr")</p> 
         </div>
     }
 </div>
