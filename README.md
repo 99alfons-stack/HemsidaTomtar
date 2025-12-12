@@ -21,11 +21,11 @@ dotnet watch
 Applikationen startar på på din LocalHost Kolla terminalutskriften för exakt URL. Länken kan du koppiera och klista in i din sökrutan på din webbapplikation
 
 # Projektstruktur 
-- `Program.cs` – konfiguration av services
-- `Controllers/` – MVC-kontrollers (Home, Staff, Product)
-- `Models/` – modeller och mock-repositories
-- `Views/` – Razor Views
-- `wwwroot/` – statiska filer (CSS, JS, bilder)
+- `Program.cs`  konfiguration av services
+- `Controllers/`  MVC-kontrollers (Home, Staff, Product)
+- `Models/`  modeller och mock-repositories
+- `Views/`  Razor Views
+- `wwwroot/`  statiska filer (CSS, JS, bilder)
 
 
 
