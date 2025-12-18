@@ -1,0 +1,26 @@
+/* Home page styling */
+.Sub-title {
+  text-align: center;
+}
+
+.aboutus {
+  text-align: center;
+}
+
+.workshop {
+  text-align: center;
+}
+
+.aboutusParag {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.workshopParag {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 15px;
+}

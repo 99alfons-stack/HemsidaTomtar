@@ -1,0 +1,101 @@
+/* Staff page styling */
+.staff-info {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 40px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.staff-info:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.staff-info h1 {
+  color: #1a1a1a;
+  margin-bottom: 25px;
+  font-size: 2.5em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.staff-image {
+  max-width: 350px;
+  height: auto;
+  border-radius: 12px;
+  margin: 25px 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  border: 4px solid white;
+  transition: transform 0.3s ease;
+}
+
+.staff-image:hover {
+  transform: scale(1.02);
+}
+
+.staff-details {
+  text-align: left;
+  margin-top: 30px;
+  font-size: 16px;
+  line-height: 2;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.staff-details p {
+  margin: 12px 0;
+  color: #333;
+  font-size: 1.1em;
+}
+
+.staff-details a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.staff-details a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.staff-admin-badge {
+  display: inline-block;
+  background-color: #ffc107;
+  color: #333;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 0.95em;
+  box-shadow: 0 3px 8px rgba(255, 193, 7, 0.3);
+}
+
+.staff-bio {
+  margin-top: 35px;
+  padding: 25px;
+  background: linear-gradient(135deg, #fff9e6 0%, #fff0cc 100%);
+  border-left: 6px solid #ff9800;
+  border-radius: 8px;
+  text-align: left;
+  color: #555;
+  line-height: 1.8;
+  box-shadow: 0 4px 12px rgba(255, 152, 0, 0.15);
+}
+
+.staff-bio h3 {
+  color: #ff9800;
+  margin-bottom: 15px;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.staff-bio p {
+  font-size: 1em;
+  color: #333;
+}

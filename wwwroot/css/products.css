@@ -1,0 +1,82 @@
+/* Product page styling */
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.product-item {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 300px;
+}
+
+.product-item:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.product-price {
+  font-weight: 600;
+  color: #2a2a2a;
+  margin-top: 8px;
+}
+
+.product-image {
+  max-width: 250px;
+  height: auto;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Filterlänkar för kategorifiltrering */
+.product-filters {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin: 10px 0 20px;
+}
+
+.product-filters a {
+  padding: 8px 14px;
+  border-radius: 20px;
+  background: #f2f2f2;
+  color: #333;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.product-filters a:hover {
+  background: #e5e5e5;
+}
+
+.product-filters a.active {
+  background: #007bff;
+  color: white;
+}
+
+/* Kategori-badge på produktkort */
+.category-badge {
+  display: inline-block;
+  margin: 6px 0 10px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  background: #eef4ff;
+  color: #1b4db1;
+  font-size: 0.85rem;
+}
+
+/* Specifika bildstorlekar */
+img[src*="img_3"] {
+  max-width: 170px;
+  height: auto;
+}
+
+img[src*="img_1"] {
+  max-width: 300px;
+  height: auto;
+}

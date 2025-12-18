@@ -13,9 +13,20 @@ public class ProductController : Controller
         _IProductRepository = productRepository;
     }
 
-    public IActionResult Index()
+    // Tar emot kategori via query (?category=Figurer) för filtrering
+    public IActionResult Index(ProductCategory? category)
     {
-        ViewBag.message="PRODUKTER";
-        return View(_IProductRepository.AllProducts);
+        IEnumerable<Product> products = _IProductRepository.AllProducts;
+        if (category.HasValue)
+        {
+            products = _IProductRepository.GetByCategory(category.Value);
+            ViewBag.message = $"PRODUKTER  {category.Value}";
+        }
+        else
+        {
+            ViewBag.message = "PRODUKTER";
+        }
+        ViewBag.CurrentCategory = category?.ToString(); // För att markera aktivt filter i vyn
+        return View(products);
     }
 }
