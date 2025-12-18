@@ -2,13 +2,22 @@
 
 <h1>@ViewBag.message</h1>
 
+@* Filterlänkar – active-klass markerar valt filter *@
+<nav class="product-filters">
+    <a asp-controller="Product" asp-action="Index" class="@(string.IsNullOrEmpty(ViewBag.CurrentCategory) ? "active" : null)">Alla</a>
+    <a asp-controller="Product" asp-action="Index" asp-route-category="Figurer" class="@(ViewBag.CurrentCategory=="Figurer" ? "active" : null)">Figurer</a>
+    <a asp-controller="Product" asp-action="Index" asp-route-category="Workshops" class="@(ViewBag.CurrentCategory=="Workshops" ? "active" : null)">Workshops</a>
+</nav>
+
 <div class="product-list">
     @foreach (var product in Model)
     {
         <div class="product-item">
             <h3>@product.Name</h3>
+            @* Visar kategori-badge på varje produktkort *@
+            <span class="category-badge">@product.Category</span>
             <img src="~/Img/Tomte_@(product.ProductId).jpg" alt="@product.Name" class="product-image" />
-            <p class="product-price">@($"{product.Price:0.00} kr")</p> 
+            <p class="product-price">@($"{product.Price:0.00} kr")</p>
         </div>
     }
 </div>
