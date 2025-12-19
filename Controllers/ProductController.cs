@@ -13,7 +13,7 @@ public class ProductController : Controller
         _IProductRepository = productRepository;
     }
 
-    // Tar emot kategori via query (?category=Figurer) för filtrering
+    // Tar emot kategori  (category=Figurer) för filtrering
     public IActionResult Index(ProductCategory? category)
     {
         IEnumerable<Product> products = _IProductRepository.AllProducts;
@@ -26,7 +26,7 @@ public class ProductController : Controller
         {
             ViewBag.message = "PRODUKTER";
         }
-        ViewBag.CurrentCategory = category?.ToString(); // För att markera aktivt filter i vyn
+        ViewBag.CurrentCategory = category?.ToString(); // Fvisa kategorien föremålet tillhör
         return View(products);
     }
 }
