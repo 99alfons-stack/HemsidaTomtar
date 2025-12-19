@@ -1,0 +1,25 @@
+@model IEnumerable<TodoList>
+
+<h1>Lägg Till Ny Produkt</h1>
+
+<form asp-action="SaveNewItem" method="post" role="form">
+
+<div>
+    <input type="text" name="name">
+</div>
+
+<div>
+    <label for="todoListId">Välj lista</label>
+    <select name="todoListId">
+        @foreach (TodoList todoList in Model) {
+            <option value="@todoList.TodoListId">@todoList.Name</option>
+        }
+        
+    </select>
+</div>
+
+<div>
+    <button type="submit">Spara</button>
+</div>
+
+</form>

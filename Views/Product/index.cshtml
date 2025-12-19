@@ -4,6 +4,7 @@
 
 @* Filterlänkar – active-klass markerar valt filter *@
 <nav class="product-filters">
+    <!--Vet inte om dett är helt rätt men verkar funka nu, får höra vad fredrik säger efter inlämning-->
     <a asp-controller="Product" asp-action="Index" class="@(string.IsNullOrEmpty(ViewBag.CurrentCategory) ? "active" : null)">Alla</a>
     <a asp-controller="Product" asp-action="Index" asp-route-category="Figurer" class="@(ViewBag.CurrentCategory=="Figurer" ? "active" : null)">Figurer</a>
     <a asp-controller="Product" asp-action="Index" asp-route-category="Workshops" class="@(ViewBag.CurrentCategory=="Workshops" ? "active" : null)">Workshops</a>
@@ -18,6 +19,8 @@
             <span class="category-badge">@product.Category</span>
             <img src="~/Img/Tomte_@(product.ProductId).jpg" alt="@product.Name" class="product-image" />
             <p class="product-price">@($"{product.Price:0.00} kr")</p>
+            <!--lägger till bio i Workshops produkterna-->
+            <p class = "workshop-bio">@product.Bio</p>
         </div>
     }
 </div>

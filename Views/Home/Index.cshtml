@@ -1,5 +1,6 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    @model IEnumerable<TodoList>
 }
 
 <div >
@@ -13,4 +14,10 @@
 <h2 class="workshop">Vår verksamhet</h2>
 <p class="workshopParag">Hos oss står varje produkt i centrum. Alla våra tomtefigurer tillverkas för hand från noggrant utvalda träslag. <br />Genom ett kombinerat fokus på precision, formgivning och hållbarhet skapar vi figurer med både karaktär och lång livslängd.<br /><br />Vårt mål är att erbjuda produkter som inte bara fungerar som dekoration, utan som också bär på en känsla av tradition och genuint hantverk.</p>
 
+        <ul class ="ul-list">
+        @foreach (TodoList list in Model)
+        {
+            <li><a href="/home/list/@list.TodoListId">@list.Name</a></li>
+        }
+        </ul>
 </div>

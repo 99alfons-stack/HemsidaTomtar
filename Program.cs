@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using mvctest.Models;
 
 public partial class Program
@@ -7,9 +9,16 @@ public partial class Program
         var builder = WebApplication.CreateBuilder(args);
 
         // Add services to the container.
+        builder.Services.AddScoped<ITodoListRepository, TodoListRepository>();
+        builder.Services.AddScoped<ITodoItemRepository, TodoItemRepository>();
         builder.Services.AddScoped<IStaffRepository, MockStaffRepository>(); // lagt till personalen
         builder.Services.AddScoped<IProductRepository, MockProductRepository>();// lagt till produkterna
         builder.Services.AddControllersWithViews();
+        builder.Services.AddDbContext<AppDbContext>(Options =>
+        {
+            Options.UseMySql(builder.Configuration.GetConnectionString("AppDbContextConnection"),
+            ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("AppDbContextConnection")));
+        });
 
         var app = builder.Build();
 
