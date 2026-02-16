@@ -22,7 +22,7 @@ public class MockProductRepository : IProductRepository
         };
 
 
-    //använder p som förkortning på produkt
+    //använder p som förkortning på produktw
     public Product? GetProductById(int productId) =>
         AllProducts.FirstOrDefault(p => p.ProductId == productId);
 

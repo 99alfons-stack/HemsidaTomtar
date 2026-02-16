@@ -8,7 +8,7 @@ namespace mvctest.Controllers;
 public class StaffController : Controller /*paket vi använder*/
 {
 
-    //få tillgång vår service vå skapade
+    //få tillgång vår service som vi skapade
 
     private readonly IStaffRepository _staffRepository;
 

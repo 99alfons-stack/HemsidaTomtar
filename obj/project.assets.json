@@ -2047,11 +2047,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "s:\\alfons\\Git\\mvctest\\mvctest.csproj",
+      "projectUniqueName": "S:\\alfons\\Git\\mvctest\\mvctest.csproj",
       "projectName": "mvctest",
-      "projectPath": "s:\\alfons\\Git\\mvctest\\mvctest.csproj",
+      "projectPath": "S:\\alfons\\Git\\mvctest\\mvctest.csproj",
       "packagesPath": "C:\\Users\\99alf\\.nuget\\packages\\",
-      "outputPath": "s:\\alfons\\Git\\mvctest\\obj\\",
+      "outputPath": "S:\\alfons\\Git\\mvctest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2124,7 +2124,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.AspNetCore": "(,10.0.32767]",
           "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",
