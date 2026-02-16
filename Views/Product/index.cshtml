@@ -4,10 +4,12 @@
 
 @* Filterlänkar – active-klass markerar valt filter *@
 <nav class="product-filters">
-    <!--Vet inte om dett är helt rätt men verkar funka nu, får höra vad fredrik säger efter inlämning-->
     <a asp-controller="Product" asp-action="Index" class="@(string.IsNullOrEmpty(ViewBag.CurrentCategory) ? "active" : null)">Alla</a>
     <a asp-controller="Product" asp-action="Index" asp-route-category="Figurer" class="@(ViewBag.CurrentCategory=="Figurer" ? "active" : null)">Figurer</a>
     <a asp-controller="Product" asp-action="Index" asp-route-category="Workshops" class="@(ViewBag.CurrentCategory=="Workshops" ? "active" : null)">Workshops</a>
+    <a asp-controller="Product" asp-action="Index" asp-route-category="Juldekoration" class="@(ViewBag.CurrentCategory=="Juldekoration" ? "active" : null)">Juldekoration</a>
+    <a asp-controller="Product" asp-action="Index" asp-route-category="Blomdekorationer" class="@(ViewBag.CurrentCategory=="Blomdekorationer" ? "active" : null)">Blomdekorationer</a>
+    <a asp-controller="Product" asp-action="Index" asp-route-category="Familjepaketen" class="@(ViewBag.CurrentCategory=="Familjepaketen" ? "active" : null)">Familjepaketen</a>
 </nav>
 
 <div class="product-list">

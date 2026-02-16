@@ -9,18 +9,24 @@ public partial class Program
         var builder = WebApplication.CreateBuilder(args);
 
         // Add services to the container.
-        builder.Services.AddScoped<ITodoListRepository, TodoListRepository>();
-        builder.Services.AddScoped<ITodoItemRepository, TodoItemRepository>();
-        builder.Services.AddScoped<IStaffRepository, MockStaffRepository>(); // lagt till personalen
-        builder.Services.AddScoped<IProductRepository, MockProductRepository>();// lagt till produkterna
+        builder.Services.AddScoped<IStaffRepository, MockStaffRepository>();
+        builder.Services.AddScoped<IProductRepository, MockProductRepository>();
         builder.Services.AddControllersWithViews();
+        
+        // Use InMemoryDatabase för Entity Framework
         builder.Services.AddDbContext<AppDbContext>(Options =>
         {
-            Options.UseMySql(builder.Configuration.GetConnectionString("AppDbContextConnection"),
-            ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("AppDbContextConnection")));
+            Options.UseInMemoryDatabase("TomatArDatabase");
         });
 
         var app = builder.Build();
+
+        // Initialize the database with seed data
+        using (var scope = app.Services.CreateScope())
+        {
+            var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+            dbContext.Database.EnsureCreated();
+        }
 
         // Configure the HTTP request pipeline.
         if (!app.Environment.IsDevelopment())

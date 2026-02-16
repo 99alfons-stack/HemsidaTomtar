@@ -112,7 +112,6 @@ S:\alfons\Git\mvctest\obj\Debug\net10.0\scopedcss\Views\Shared\_Layout.cshtml.rz
 S:\alfons\Git\mvctest\obj\Debug\net10.0\scopedcss\bundle\mvctest.styles.css
 S:\alfons\Git\mvctest\obj\Debug\net10.0\scopedcss\projectbundle\mvctest.bundle.scp.css
 S:\alfons\Git\mvctest\obj\Debug\net10.0\compressed\dih9sppqoh-{0}-u8f8sffkn4-u8f8sffkn4.gz
-S:\alfons\Git\mvctest\obj\Debug\net10.0\compressed\ls31fao46g-{0}-9f794aku5p-9f794aku5p.gz
 S:\alfons\Git\mvctest\obj\Debug\net10.0\compressed\vbr25ukdby-{0}-m92qq4zbhy-m92qq4zbhy.gz
 S:\alfons\Git\mvctest\obj\Debug\net10.0\compressed\qiw64t5gzm-{0}-2vfhlzpk32-2vfhlzpk32.gz
 S:\alfons\Git\mvctest\obj\Debug\net10.0\compressed\s55z3dps9v-{0}-61n19gt1b8-61n19gt1b8.gz
@@ -147,3 +146,4 @@ S:\alfons\Git\mvctest\obj\Debug\net10.0\mvctest.genruntimeconfig.cache
 S:\alfons\Git\mvctest\obj\Debug\net10.0\ref\mvctest.dll
 S:\alfons\Git\mvctest\obj\Debug\net10.0\compressed\u2x1rnkh23-{0}-r866ei48nf-r866ei48nf.gz
 S:\alfons\Git\mvctest\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.InMemory.dll
+S:\alfons\Git\mvctest\obj\Debug\net10.0\compressed\ls31fao46g-{0}-9f794aku5p-9f794aku5p.gz

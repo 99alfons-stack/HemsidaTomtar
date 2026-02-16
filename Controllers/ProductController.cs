@@ -6,27 +6,40 @@ namespace mvctest.Controllers;
 
 public class ProductController : Controller
 {
-    private readonly IProductRepository _IProductRepository;
+    private readonly AppDbContext _context;
 
-    public ProductController(IProductRepository productRepository)
+    public ProductController(AppDbContext context)
     {
-        _IProductRepository = productRepository;
+        _context = context;
     }
 
-    // Tar emot kategori  (category=Figurer) för filtrering
+    // Display all products or filter by category
     public IActionResult Index(ProductCategory? category)
     {
-        IEnumerable<Product> products = _IProductRepository.AllProducts;
+        IEnumerable<Product> products = _context.Products.ToList();
         if (category.HasValue)
         {
-            products = _IProductRepository.GetByCategory(category.Value);
-            ViewBag.message = $"PRODUKTER  {category.Value}";
+            products = _context.Products.Where(p => p.Category == category).ToList();
+            ViewBag.message = $"PRODUKTER - {category.Value}";
         }
         else
         {
-            ViewBag.message = "PRODUKTER";
+            ViewBag.message = "ALLA PRODUKTER";
         }
-        ViewBag.CurrentCategory = category?.ToString(); // Fvisa kategorien föremålet tillhör
+        ViewBag.CurrentCategory = category?.ToString();
         return View(products);
+    }
+
+    // Display products by category (dynamic page)
+    public IActionResult Category(string categoryName)
+    {
+        if (!Enum.TryParse<ProductCategory>(categoryName, ignoreCase: true, out var category))
+        {
+            return NotFound();
+        }
+
+        var products = _context.Products.Where(p => p.Category == category).ToList();
+        ViewBag.CategoryName = category.ToString();
+        return View("CategoryView", products);
     }
 }

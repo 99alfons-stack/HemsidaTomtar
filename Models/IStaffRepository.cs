@@ -5,5 +5,5 @@ namespace mvctest.Models;
 public interface IStaffRepository
 {
     IEnumerable<Staff> AllStaff { get; }
-    Staff? GetStaffById (int staffId);
+    Staff? GetStaffById(int staffId);
 }

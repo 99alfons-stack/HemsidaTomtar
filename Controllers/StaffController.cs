@@ -1,6 +1,5 @@
 using System;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.FileSystemGlobbing.Internal.Patterns;
 using mvctest.Models;
 
 namespace mvctest.Controllers;
@@ -16,8 +15,9 @@ public class StaffController : Controller /*paket vi använder*/
     public StaffController(IStaffRepository staffRepository)
     {
         _staffRepository = staffRepository;
-    } 
-public IActionResult Index()
+    }
+
+    public IActionResult Index()
     {
         ViewBag.message="Hej från personalen";
 
